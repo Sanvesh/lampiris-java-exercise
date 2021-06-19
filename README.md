@@ -34,7 +34,7 @@ http://localhost:8081/api/librarymanagement/authenticate
 * Upon successful authentication it will return JSON web token in a response header as ``` access-token ```.
 * Other endpoints will require this access token in request header provided as ``` Authorization = Bearer {{access-token}} ```, else the request will rejected with ```403 - Forbidden```
 * Supports both XML and JSON response; simply use desired Accept header in your request.
-* You can export all the book collection upon requesting a endpoint on any browser
+* You can export all the books collection as excel report upon requesting a endpoint with any browser
 ```
 http://localhost:8080/api/librarymanagement/book/export
 ```
@@ -52,5 +52,7 @@ http://localhost:8080/api/librarymanagement/book/export
 ```
 http://localhost:8080/v2/api-docs
 ```
-* You can copy the contents of the above service response and visualise all the endpoints at ```https://editor.swagger.io``` as HTML.
+* You can copy the contents of the above service response and visualise all the endpoints as HTML page at Swagger website.
+```
+https://editor.swagger.io
 ```
