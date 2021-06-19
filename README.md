@@ -23,8 +23,8 @@ or
 Once the application runs you should see something like this -
 
 ```
-[0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8080 (http) with context path ''
-[0;39m [2m[           main][0;39m [36mc.l.library.LibraryMgmtApplication      [0;39m [2m:[0;39m Started LibraryMgmtApplication in 2.75 seconds (JVM running for 3.149)
+[0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8080 (http) with context path ''
+[0;39m [2m[           main][0;39m [36mc.l.library.LibraryMgmtApplication       [0;39m  [2m:[0;39m Started LibraryMgmtApplication in 2.75 seconds (JVM running for 3.149)
 ```
 * The repository contains a POSTMAN collection - ``` LIBRARY-MANAGEMENT.postman_collection ```, that can be imported.
 * In order to use the services you first need to authenticate yourself with the ```username = 'lampiris' and password = 'lampiris' ``` via requesting to endpoint
@@ -41,6 +41,7 @@ http://localhost:8080/api/librarymanagement/book/export
 
 ## Run with Docker
 
+* This repository contains ``` Dockerfile ``` which can been used to generate the docker image.
 * Docker image can be build using command ``` docker build -f Dockerfile -t docker-library-mgmt . ```  (use ```.``` at end if you are in same directory else provide the path)
 * Run the image in container by running the command ``` docker run -p 8081:8080 docker-library-mgmt ``` (You can choose the port you want to map, application configure to run in ```port=8080```)
 * It is already publish to Docker Hub. In order to pull the image from Docker hub use command ``` docker pull sanvesh0402/docker-library-mgmt ```
